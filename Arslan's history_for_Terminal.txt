@@ -1,0 +1,149 @@
+    1  sudo apt install gcc
+    2  sudo apt install make
+    3  sudo apt install perl
+    4  sudo apt update
+    5  sudo apt install software-properties-common 
+    6  sudo add-apt-repository ppa:deadsnakes/ppa
+    7  sudo apt install python3.7
+    8  python3.7
+    9  python3.7 -e venv pms
+   10  python3.7 -m venv pms
+   11  python3.7 -m pip install --user virtualenv
+   12  sudo apt install pip3.7
+   13  sudo apt install python3-pip
+   14  pip3 install virtualenv
+   15  python3.7 -m venv pms
+   16  python3.7 --verion
+   17  python3.7 --v
+   18  python3.7 -v
+   19  python3.7 -verison
+   20  python3.7 -version
+   21  python3.7 -h
+   22  python3.7 -V
+   23  sudo apt install pip3.7
+   24  sudo apt install python3.7-pip
+   25  python3.7 -m pip
+   26  python3.7 -m pip install virtualenv
+   27  python3.7 -m venv pms
+   28  ls
+   29  cd pms/
+   30  ls
+   31  cd bin/
+   32  ls
+   33  cd ..
+   34  rm -r pms/
+   35  ls
+   36  python3.7 -m venv pms
+   37  sudo apt-get install python-virtualenv
+   38  which python3.7
+   39  virtualenv --python=/usr/bin/python3.7 venv
+   40  virtualenv --python=/usr/bin/python3.7 pms
+   41  rm -r pms/
+   42  virtualenv --python=/usr/bin/python3.7 pms
+   43  source pms/bin/activate
+   44  pip -V
+   45  clear
+   46  python
+   47  which python
+   48  clear
+   49  which python3.7
+   50  source deactivate
+   51  deactivate
+   52  which python3.7
+   53  which sudo
+   54  clear
+   55  cd Desktop/
+   56  cd pms_project/
+   57  ls
+   58  pwd
+   59  source ../../../pms/bin/activate
+   60  which gunicorn
+   61  crontab -e
+   62  cd /var/log/
+   63  service cron status
+   64  ls
+   65  crontab -r
+   66  crontab -e
+   67  service cron status
+   68  ls
+   69  sudo ls
+   70  ls
+   71  crontab -e
+   72  /home/test/pms/bin/python /home/test/Desktop/pms_project/pms_project/manage.py discover_ips > /home/readings.log
+   73  cd ~
+   74  pwd
+   75  /home/test/pms/bin/python /home/test/Desktop/pms_project/pms_project/manage.py discover_ips > /home/test/readings.log
+   76  crontab -e
+   77  cd /home/test/
+   78  ls
+   79  cat readings.log 
+   80  cd Desktop/pms_project/pms_project/
+   81  python manage.py createsuperuser
+   82  cd pms/
+   83  cd ..
+   84  source pms/bin/activate
+   85  cd Desktop/pms_project/
+   86  cd pms_project/
+   87  ls
+   88  pip install -r requirments.txt 
+   89  python manage.py runserver
+   90  clear
+   91  sudo apt-get install postgressql
+   92  sudo apt-get install postgresql
+   93  sudo su - postgres
+   94  clear
+   95  pip psycopg2
+   96  pip install psycopg2
+   97  pip install psycopg2-binary
+   98  ls
+   99  cd pms_project/
+  100  nano settings.py 
+  101  cd ..
+  102  python manage.py migrate
+  103  nano pms_project/settings.py 
+  104  python manage.py migrate
+  105  deactivate
+  106  source ../../../pms/bin/activate
+  107  pip install gunicorn
+  108  ls
+  109  cd pms_project/
+  110  ls
+  111  cd ..
+  112  cd pms_project/
+  113  gunicorn -b 0.0.0.0:8000 wsgi
+  114  cd ..
+  115  gunicorn -b 0.0.0.0:8000 wsgi
+  116  python manage.py collectstatic
+  117  clear
+  118  sudo apt-get install supervisor
+  119  which gunicorn
+  120  cd /etc/supervisor/conf.d/
+  121  nano pms.conf
+  122  sudo nano pms.conf
+  123  sudo supervisorctl reload
+  124  sudo supervisorctl update
+  125  sudo supervisorctl status
+  126  tail -f /var/log/pms.err.log 
+  127  sudo nano pms.conf
+  128  sudo supervisorctl update
+  129  sudo supervisorctl status
+  130  sudo supervisorctl stop pms
+  131  sudo supervisorctl start pms
+  132  sudo nano pms.conf
+  133  which python
+  134  cd ~/Desktop/pms_project/pms_project/
+  135  ls
+  136  pwd
+  137  python manage.py 
+  138  pyhton manage.py discover_ips
+  139  python manage.py discover_ips
+  140  cd pms/
+  141  source bin/activate
+  142  clear
+  143  cd ..
+  144  cd Desktop/
+  145  cd pms_project/
+  146  ls
+  147  pip freeze > requirments.txt 
+  148  ls
+  149  history > history_for_print.txt

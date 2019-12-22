@@ -1,0 +1,64 @@
+Useful urls: 
+http://rahmonov.me/posts/run-a-django-app-with-nginx-gunicorn-and-supervisor/ 
+https://linuxize.com/post/how-to-create-python-virtual-environments-on-ubuntu-18-04/ 
+https://www.digitalocean.com/community/co/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+
+
+Install python 3.7:
+
+sudo apt update
+sudo apt install software-properties-common
+sudo apt install python3.7
+sudo apt install python3-pip
+sudo apt-get install python-virtualenv
+which python3.7 (copy this bellow)
+virtualenv --python=/usr/bin/python3.7(here) pms
+
+
+Activate Enviroment:
+
+source pms/bin/activate
+
+Goto project folder
+
+pip install -r requirements.txt
+
+Install postgres:
+
+sudo apt-get install postgresql
+sudo su - postgres
+psql
+create database pms_db;
+create user pm_user with pasword '1234';
+GRANT ALL PRIVILEGES ON DATABASE pms TO pm_user;
+ALTER database pms_db owner to pm_user;
+
+\q
+(Control + D) 
+
+python manage.py migrate
+sudo apt-get install supervisor
+which guicorn (actiavte huy huy py llikhni hai)
+cd /etc/supervisor/conf.d/
+
+------------------crontabe k liye------------
+-------settings---
+[program:pms]
+directory=/home/waiz/Downloads/pms_project/pms_project (yeh wo directory jahan wsgi.py pari hai)
+autostart=true
+autorestart=true
+command=/home/waiz/Downloads/pms_project/env_pms/bin/gunicorn --workers 3 --bind 0.0.0.0:8000 wsgi
+stderr_logfile=/home/waiz/pms.err.log
+stdout_logfile=/home/waiz/pms.out.log
+--------------------
+
+crontabe generator website py jana hai 
+command to execute men phenyl pms project men jana, activate kr k which python wali command +  jahan manage.py hoti hai which kar k director copy krni + discover_ips
+
+save output file select kr k agy /home/test/readings.log        ..(yeh jo home/test hai yeh cd ~ kr pwd sy aya hai)
+generate cron tab press karna aur lambi wali command ko Copy kar k
+project men a k "crontabe -e"
+enter "1"
+paste command
+press ctrl x
