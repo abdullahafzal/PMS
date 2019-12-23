@@ -1,5 +1,5 @@
 from django_filters import rest_framework as filters
-import rest_framework_filters as rest_filters
+#import rest_framework_filters as rest_filters
 from django.db.models import Sum, Window, Avg, F, Max
 from app.models import RpmReading
 import datetime

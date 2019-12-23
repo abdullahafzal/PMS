@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  pmsdb:
+    image: postgres
+    ports:
+     - "5401:5432"
+    environment:
+     - POSTGRES_USER=pms_user
+     - POSTGRES_PASSWORD=1234
+     - POSTGRES_DB=pms_db
+  django:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - pmsdb
