@@ -12,6 +12,11 @@ class RpmReadingsFilter(filters.FilterSet):
     machine_no = filters.CharFilter(method='meters_sum_func')
     last_minutes = filters.CharFilter(method='last_minutes_func')
 
+
+#testing pull request
+
+    # another coomennt
+
     def meters_sum_func(self, queryset, name, value):
         return queryset.filter(machine_no=value).annotate(total=Window(expression=Sum('meters')))
 
@@ -19,6 +24,7 @@ class RpmReadingsFilter(filters.FilterSet):
         now = timezone.now()
         earlier = timezone.now() - datetime.timedelta(minutes=int(value))
         return queryset.filter(time__range=(earlier, now))
+
 
     class Meta:
         model = RpmReading
