@@ -12,6 +12,7 @@ class RpmReadingsFilter(filters.FilterSet):
     machine_no = filters.CharFilter(method='meters_sum_func')
     last_minutes = filters.CharFilter(method='last_minutes_func')
 
+
 #testing pull request
 
     # another coomennt
